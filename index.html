@@ -1,0 +1,3991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>TechnoBubble</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #wrapper {
+        min-height: 100%;
+        position: relative;
+      }
+      /*
+      #footer {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        height: 80px;
+        width: 100%;
+      }
+      */
+
+      #footer {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .vertical-center {
+        min-height: 100%;
+        /* Fallback for browsers do NOT support vh unit */
+        min-height: 86vh;
+        /* These two lines are counted as one :-)       */
+
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body style="min-height: 100%">
+    <div id="wrapper">
+      <section id="header-page">
+        <div>
+          <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-primary p-4">
+                <h4 class="text-white">TechnoBubble</h4>
+                <span class="text-white"
+                  >This site is brought to you by Yuryjin.</span
+                >
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-primary">
+              <a class="navbar-brand" href="">TechnoBubble</a>
+              <!--
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        -->
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section id="content-page" style="min-height: 100%">
+        <div
+          class="container"
+          style="width: 100%; padding-top: 10vh; padding-bottom: 20vh"
+        >
+          <!-- mainpage and search bar -->
+          <div class="row" style="display: block" id="homepage-mainblock">
+            <div class="col-12">
+              <div
+                class="search-section"
+                style="padding-top: 3rem; height: 84vh"
+              >
+                <div class="container">
+                  <div class="row">
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                    <div
+                      class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 text-center"
+                    >
+                      <h1>TechnoBubble</h1>
+                    </div>
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                    <div
+                      class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 text-center"
+                    >
+                      <h5 style="padding-left: 0px">
+                        Find all interesting facts about technology
+                      </h5>
+                    </div>
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                    <div
+                      class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 text-center"
+                    ></div>
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-12">
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="programming-languages-mainblock"
+                      >
+                        Programming languages
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="web-development-mainblock"
+                      >
+                        Web-development
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="hosting-mainblock"
+                      >
+                        Hosting
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="computer-components-mainblock"
+                      >
+                        Computer components
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="storage-types-mainblock"
+                      >
+                        Storage types
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                    <div
+                      class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 text-center"
+                    >
+                      <p style="text-align: justify">
+                        Here you can find out interesting facts about computer
+                        technology, cloud systems, web-security and etc. In this
+                        app you can interactively choose content you want, by
+                        using menus and schemas.
+                      </p>
+                    </div>
+                    <div
+                      class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- programming languages menu -->
+          <div
+            class="row"
+            style="display: none"
+            id="programming-languages-mainblock"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+                  style="width: 100%"
+                >
+                  <div
+                    class="options-menu options-programming-languages"
+                    style="margin: 5px; height: 84vh"
+                  >
+                    <ul class="list-group border border-secondary rounded-lg">
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="c-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">C</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="cpp-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">C++</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="csharp-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">C#</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="python-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">Python</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="javascript-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">Javascript</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="php-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">PHP</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="swift-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">Swift</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="java-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">Java</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="kotlin-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">Kotlin</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
+                  style="width: 100%"
+                >
+                  <div class="row d-none d-lg-block">
+                    <div class="col-12" style="height: 70vh; width: 100%">
+                      <div class="row">
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/c-programming.png"
+                            alt=""
+                            data-target="c-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="c-language-display"
+                          >
+                            C
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/c++-icon.png"
+                            alt=""
+                            data-target="cpp-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="cpp-language-display"
+                          >
+                            C++
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/csharp-icon.png"
+                            alt=""
+                            data-target="csharp-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="csharp-language-display"
+                          >
+                            C#
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/python-icon.png"
+                            alt=""
+                            data-target="python-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="python-language-display"
+                          >
+                            Python
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/javascript.png"
+                            alt=""
+                            data-target="javascript-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="javascript-language-display"
+                          >
+                            Javascript
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/php.png"
+                            alt=""
+                            data-target="php-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="php-language-display"
+                          >
+                            PHP
+                          </h2>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/swift-icon.png"
+                            alt=""
+                            data-target="swift-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="swift-language-display"
+                          >
+                            Swift
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/java.png"
+                            alt=""
+                            data-target="java-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="java-language-display"
+                          >
+                            Java
+                          </h2>
+                        </div>
+                        <div class="col-12 col-sm-3 text-center icondivs">
+                          <img
+                            class="icons0 block-switch"
+                            style="height: 9rem; width: 9rem"
+                            src="images/prog-languages/kotlin.png"
+                            alt=""
+                            data-target="kotlin-language-display"
+                          />
+                          <h2
+                            class="iconname block-switch"
+                            data-target="kotlin-language-display"
+                          >
+                            Kotlin
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 text-center"
+                      style="height: 16vh; width: 100%"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="homepage-mainblock"
+                        style="margin-top: 50px"
+                      >
+                        Go back to Homepage!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- web-development menu -->
+          <div class="row" style="display: none" id="web-development-mainblock">
+            <div class="col-12">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+                  style="width: 100%"
+                >
+                  <div
+                    class="options-menu options-programming-languages"
+                    style="margin: 5px; height: 84vh"
+                  >
+                    <ul class="list-group border border-secondary rounded-lg">
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="web-development-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >web-development</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="world-wide-web-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >World Wide Web</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="html-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">HTML</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="css-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">CSS</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="static-sites-display"
+                      >
+                        <a class="nav-link text-black" href="#">Static sites</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="static-sites-generators-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Static sites generators</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="content-management-systems-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Content Management Systems (CMS)</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="ajax-language-display"
+                      >
+                        <a class="nav-link text-black" href="#">AJAX</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="bootstrap-display"
+                      >
+                        <a class="nav-link text-black" href="#">bootstrap</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
+                  style="width: 100%"
+                >
+                  <div class="row d-none d-lg-block">
+                    <div class="col-12" style="height: 70vh; width: 100%">
+                      <div class="row d-none d-lg-block">
+                        <div class="col-12" style="height: 70vh; width: 100%">
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/web-development.png"
+                                alt=""
+                                data-target="web-development-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="web-development-display"
+                              >
+                                Development
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/www.png"
+                                alt=""
+                                data-target="world-wide-web-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="world-wide-web-display"
+                              >
+                                WWW
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/html-5.png"
+                                alt=""
+                                data-target="html-language-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="html-language-display"
+                              >
+                                HTML
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/css.png"
+                                alt=""
+                                data-target="css-language-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="css-language-display"
+                              >
+                                CSS
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/static-sites.png"
+                                alt=""
+                                data-target="static-sites-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="static-sites-display"
+                              >
+                                Static sites
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/static-sites-generators.png"
+                                alt=""
+                                data-target="static-sites-generators-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="static-sites-generators-display"
+                              >
+                                SSG
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/cms.png"
+                                alt=""
+                                data-target="content-management-systems-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="content-management-systems-display"
+                              >
+                                CMS
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/ajax.png"
+                                alt=""
+                                data-target="ajax-language-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="ajax-language-display"
+                              >
+                                AJAX
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/web-development/bootstrap.png"
+                                alt=""
+                                data-target="bootstrap-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="bootstrap-display"
+                              >
+                                Bootstrap
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 text-center"
+                      style="height: 16vh; width: 100%"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="homepage-mainblock"
+                        style="margin-top: 50px"
+                      >
+                        Go back to Homepage!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hosting menu -->
+          <div class="row" style="display: none" id="hosting-mainblock">
+            <div class="col-12">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+                  style="width: 100%"
+                >
+                  <div
+                    class="options-menu options-programming-languages"
+                    style="margin: 5px; height: 84vh"
+                  >
+                    <ul class="list-group border border-secondary rounded-lg">
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="http-https-display"
+                      >
+                        <a class="nav-link text-black" href="#">http & https</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="ssl-sertificates-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >SSL certificates</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="vps-display"
+                      >
+                        <a class="nav-link text-black" href="#">VPS</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="cdn-display"
+                      >
+                        <a class="nav-link text-black" href="#">CDN</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="caching-display"
+                      >
+                        <a class="nav-link text-black" href="#">Caching</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="shared-hosting-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Shared hosting</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="cloud-hosting-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Cloud hosting</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="dedicated-server-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Dedicated server</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="optimisation-display"
+                      >
+                        <a class="nav-link text-black" href="#">Optimisation</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
+                  style="width: 100%"
+                >
+                  <div class="row d-none d-lg-block">
+                    <div class="col-12" style="height: 70vh; width: 100%">
+                      <div class="row d-none d-lg-block">
+                        <div class="col-12" style="height: 70vh; width: 100%">
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/https.png"
+                                alt=""
+                                data-target="http-https-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="http-https-display"
+                              >
+                                HTTPS
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/ssl.png"
+                                alt=""
+                                data-target="ssl-sertificates-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="ssl-sertificates-display"
+                              >
+                                SSL
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/vps.png"
+                                alt=""
+                                data-target="vps-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="vps-display"
+                              >
+                                VPS
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/cdn.png"
+                                alt=""
+                                data-target="cdn-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="cdn-display"
+                              >
+                                CDN
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/cache.png"
+                                alt=""
+                                data-target="caching-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="caching-display"
+                              >
+                                Caching
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/shared-hosting.png"
+                                alt=""
+                                data-target="shared-hosting-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="shared-hosting-display"
+                              >
+                                Shared
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/cloud-hosting.png"
+                                alt=""
+                                data-target="cloud-hosting-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="cloud-hosting-display"
+                              >
+                                Cloud
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/dedicated-server.png"
+                                alt=""
+                                data-target="dedicated-server-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="dedicated-server-display"
+                              >
+                                Dedicated
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/hosting/optimization.png"
+                                alt=""
+                                data-target="optimisation-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="optimisation-display"
+                              >
+                                Optimisation
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 text-center"
+                      style="height: 16vh; width: 100%"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="homepage-mainblock"
+                        style="margin-top: 50px"
+                      >
+                        Go back to Homepage!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- computer components menu -->
+          <div
+            class="row"
+            style="display: none"
+            id="computer-components-mainblock"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+                  style="width: 100%"
+                >
+                  <div
+                    class="options-menu options-programming-languages"
+                    style="margin: 5px; height: 84vh"
+                  >
+                    <ul class="list-group border border-secondary rounded-lg">
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="ram-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >RAM</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="rom-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >ROM</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="vram-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >VRAM</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="processor-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Processor</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="videocard-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Videocard</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="soundcard-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Soundcard</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="motherboard-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Motherboard</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="input-devices-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Input devices</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="coolant-system-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Coolant system</a
+                        >
+                      </li>
+                      <!--
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="optical-drive-display"
+                      >
+                        <a class="nav-link text-black block-switch" href="#"
+                          >Optical drive</a
+                        >
+                      </li>
+                      -->
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
+                  style="width: 100%"
+                >
+                  <div class="row d-none d-lg-block">
+                    <div class="col-12" style="height: 70vh; width: 100%">
+                      <div class="row d-none d-lg-block">
+                        <div class="col-12" style="height: 70vh; width: 100%">
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/ram.png"
+                                alt=""
+                                data-target="ram-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="ram-display"
+                              >
+                                RAM
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/rom.png"
+                                alt=""
+                                data-target="rom-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="rom-display"
+                              >
+                                ROM
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/vram.png"
+                                alt=""
+                                data-target="vram-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="vram-display"
+                              >
+                                VRAM
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/processor.png"
+                                alt=""
+                                data-target="processor-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="processor-display"
+                              >
+                                Processor
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/videocard.png"
+                                alt=""
+                                data-target="videocard-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="videocard-display"
+                              >
+                                Videocard
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/soundcard.png"
+                                alt=""
+                                data-target="soundcard-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="soundcard-display"
+                              >
+                                Soundcard
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/motherboard.png"
+                                alt=""
+                                data-target="motherboard-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="motherboard-display"
+                              >
+                                Motherboard
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/input-devices.png"
+                                alt=""
+                                data-target="input-devices-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="input-devices-display"
+                              >
+                                Input
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/computer-components/cooler.png"
+                                alt=""
+                                data-target="coolant-system-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="coolant-system-display"
+                              >
+                                Cooling
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 text-center"
+                      style="height: 16vh; width: 100%"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="homepage-mainblock"
+                        style="margin-top: 50px"
+                      >
+                        Go back to Homepage!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- storage types menu -->
+          <div class="row" style="display: none" id="storage-types-mainblock">
+            <div class="col-12">
+              <div class="row">
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+                  style="width: 100%"
+                >
+                  <div
+                    class="options-menu options-programming-languages"
+                    style="margin: 5px; height: 84vh"
+                  >
+                    <ul class="list-group border border-secondary rounded-lg">
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="hdd-display"
+                      >
+                        <a class="nav-link text-black" href="#">HHD</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="ssd-display"
+                      >
+                        <a class="nav-link text-black" href="#">SSD</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="nvme-ssd-display"
+                      >
+                        <a class="nav-link text-black" href="#">NVMe SSD</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="optical-drive-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Optical drive</a
+                        >
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="flash-drive-display"
+                      >
+                        <a class="nav-link text-black" href="#">flash drive</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="tape-drive-display"
+                      >
+                        <a class="nav-link text-black" href="#">tape drive</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="magnet-drive-display"
+                      >
+                        <a class="nav-link text-black" href="#">magnet tape</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="punched-card-display"
+                      >
+                        <a class="nav-link text-black" href="#">Punched card</a>
+                      </li>
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="punched-tape-display"
+                      >
+                        <a class="nav-link text-black" href="#">Punched tape</a>
+                      </li>
+                      <!--
+                      <li
+                        class="list-group-item block-switch"
+                        data-target="magneto-optical-drive-display"
+                      >
+                        <a class="nav-link text-black" href="#"
+                          >Magneto optical drive</a
+                        >
+                      </li>
+                      -->
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8"
+                  style="width: 100%"
+                >
+                  <div class="row d-none d-lg-block">
+                    <div class="col-12" style="height: 70vh; width: 100%">
+                      <div class="row d-none d-lg-block">
+                        <div class="col-12" style="height: 70vh; width: 100%">
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/hdd.png"
+                                alt=""
+                                data-target="hdd-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="hdd-display"
+                              >
+                                HDD
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/ssd.png"
+                                alt=""
+                                data-target="ssd-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="ssd-display"
+                              >
+                                SSD
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/nvme.png"
+                                alt=""
+                                data-target="nvme-ssd-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="nvme-ssd-display"
+                              >
+                                NVME SSD
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/optical.png"
+                                alt=""
+                                data-target="optical-drive-display2"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="optical-drive-display2"
+                              >
+                                Optical
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/flash.png"
+                                alt=""
+                                data-target="flash-drive-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="flash-drive-display"
+                              >
+                                Flash
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/tape-drive.png"
+                                alt=""
+                                data-target="tape-drive-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="tape-drive-display"
+                              >
+                                Tape
+                              </h2>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/magnetic-tape.png"
+                                alt=""
+                                data-target="magnet-tape-drive-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="magnet-tape-drive-display"
+                              >
+                                Magnet
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/punched-card.png"
+                                alt=""
+                                data-target="punched-card-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="punched-card-display"
+                              >
+                                Perfocard
+                              </h2>
+                            </div>
+                            <div class="col-12 col-sm-3 text-center icondivs">
+                              <img
+                                class="icons0 block-switch"
+                                style="height: 9rem; width: 9rem"
+                                src="images/storage-types/punched-tape.png"
+                                alt=""
+                                data-target="punched-tape-display"
+                              />
+                              <h2
+                                class="iconname block-switch"
+                                data-target="punched-tape-display"
+                              >
+                                Perfotape
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col-12 text-center"
+                      style="height: 16vh; width: 100%"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary block-switch"
+                        data-target="homepage-mainblock"
+                        style="margin-top: 50px"
+                      >
+                        Go back to Homepage!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+          <!-- programming languages -->
+          <!-- c language display -->
+          <div class="row" style="display: none" id="c-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">C programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- c++ language display -->
+          <div class="row" style="display: none" id="cpp-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">C++ programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        C++, pronounced "C plus plus," is a programming language
+                        that was built off the C language. The syntax of C++ is
+                        nearly identical to C, but it has object-oriented
+                        features, which allow the programmer to create objects
+                        within the code. This makes programming easier, more
+                        efficient, and some would even say, more fun. Because of
+                        the power and flexibility of the language, most software
+                        programs today are written in C++.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- c# language display -->
+          <div class="row" style="display: none" id="csharp-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">C# programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        C# (pronounced "C Sharp") is a programming language
+                        developed by Microsoft. It was introduced in 2002 with
+                        version 1.0 of Microsoft's .NET Framework. Since then,
+                        C# has gone through several revisions, corresponding
+                        with each .NET update. Today, it is one of the most
+                        popular programming languages for creating Windows
+                        programs and web applications.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- python language display -->
+          <div class="row" style="display: none" id="python-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Python programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Python is a high-level programming language designed to
+                        be easy to read and simple to implement. It is open
+                        source, which means it is free to use, even for
+                        commercial applications. Python can run on Mac, Windows,
+                        and Unix systems and has also been ported to Java and
+                        .NET virtual machines.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- javasctipt language display -->
+          <div
+            class="row"
+            style="display: none"
+            id="javascript-language-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Javascript programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        JavaScript is a programming language commonly used in
+                        web development. It was originally developed by Netscape
+                        as a means to add dynamic and interactive elements to
+                        websites. While JavaScript is influenced by Java, the
+                        syntax is more similar to C and is based on ECMAScript,
+                        a scripting language developed by Sun Microsystems.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- php language display -->
+          <div class="row" style="display: none" id="php-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">PHP programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Hypertext Preprocessor." PHP is an
+                        HTML-embedded Web scripting language. This means PHP
+                        code can be inserted into the HTML of a Web page. When a
+                        PHP page is accessed, the PHP code is read or "parsed"
+                        by the server the page resides on. The output from the
+                        PHP functions on the page are typically returned as HTML
+                        code, which can be read by the browser. Because the PHP
+                        code is transformed into HTML before the page is loaded,
+                        users cannot view the PHP code on a page. This make PHP
+                        pages secure enough to access databases and other secure
+                        information.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- swift language display -->
+          <div class="row" style="display: none" id="swift-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Swift programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Swift is a high-level programming language developed by
+                        Apple and made available in 2014. It is designed for
+                        writing apps for Apple platforms, including macOS, iOS,
+                        tvOS, and watchOS.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- java language display -->
+          <div class="row" style="display: none" id="java-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Java programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Java is a high-level programming language developed by
+                        Sun Microsystems. It was originally designed for
+                        developing programs for set-top boxes and handheld
+                        devices, but later became a popular choice for creating
+                        web applications.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- kotlin language display -->
+          <div class="row" style="display: none" id="kotlin-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Kotlin programming language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Kotlin is a cross-platform, statically typed,
+                        general-purpose programming language with type
+                        inference. Kotlin is designed to interoperate fully with
+                        Java, and the JVM version of Kotlin's standard library
+                        depends on the Java Class Library, but type inference
+                        allows its syntax to be more concise
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="programming-languages-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+          <!-- web-development display -->
+          <div class="row" style="display: none" id="web-development-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Web-development</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Web development refers to building, creating, and an
+                        maintaining websites. It includes aspects such as web
+                        design, web publishing, web programming, and database
+                        management.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        While the terms "web developer" and "web designer" are
+                        often used synonymously, they do not mean the same
+                        thing. Technically, a web designer only designs website
+                        interfaces using HTML and CSS. A web developer may be
+                        involved in designing a website, but may also write web
+                        scripts in languages such as PHP and ASP. Additionally,
+                        a web developer may help maintain and update a database
+                        used by a dynamic website.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- world-wide web display -->
+          <div class="row" style="display: none" id="world-wide-web-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">World Wide Web</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "World Wide Web." It is important to know
+                        that this is not a synonym for the Internet. The World
+                        Wide Web, or just "the Web," as ordinary people call it,
+                        is a subset of the Internet. The Web consists of pages
+                        that can be accessed using a Web browser. The Internet
+                        is the actual network of networks where all the
+                        information resides. Things like Telnet, FTP, Internet
+                        gaming, Internet Relay Chat (IRC), and e-mail are all
+                        part of the Internet, but are not part of the World Wide
+                        Web. The Hyper-Text Transfer Protocol (HTTP) is the
+                        method used to transfer Web pages to your computer. With
+                        hypertext, a word or phrase can contain a link to
+                        another Web site. All Web pages are written in the
+                        hyper-text markup language (HTML), which works in
+                        conjunction with HTTP.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- html language display -->
+          <div class="row" style="display: none" id="html-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">HTML language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Hypertext Markup Language." HTML is the
+                        language used to create webpages. "Hypertext" refers to
+                        the hyperlinks that an HTML page may contain. "Markup
+                        language" refers to the way tags are used to define the
+                        page layout and elements within the page.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- css language display -->
+          <div class="row" style="display: none" id="css-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">CSS language</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Cascading Style Sheet." Cascading style
+                        sheets are used to format the layout of Web pages. They
+                        can be used to define text styles, table sizes, and
+                        other aspects of Web pages that previously could only be
+                        defined in a page's HTML.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        CSS helps Web developers create a uniform look across
+                        several pages of a Web site. Instead of defining the
+                        style of each table and each block of text within a
+                        page's HTML, commonly used styles need to be defined
+                        only once in a CSS document. Once the style is defined
+                        in cascading style sheet, it can be used by any page
+                        that references the CSS file. Plus, CSS makes it easy to
+                        change styles across several pages at once. For example,
+                        a Web developer may want to increase the default text
+                        size from 10pt to 12pt for fifty pages of a Web site. If
+                        the pages all reference the same style sheet, the text
+                        size only needs to be changed on the style sheet and all
+                        the pages will show the larger text.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- static sites display -->
+          <div class="row" style="display: none" id="static-sites-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Static websites</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A static website contains Web pages with fixed content.
+                        Each page is coded in HTML and displays the same
+                        information to every visitor. Static sites are the most
+                        basic type of website and are the easiest to create.
+                        Unlike dynamic websites, they do not require any Web
+                        programming or database design. A static site can be
+                        built by simply creating a few HTML pages and publishing
+                        them to a Web server.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Since static Web pages contain fixed code, the content
+                        of each page does not change unless it is manually
+                        updated by the webmaster. This works well for small
+                        websites, but it can make large sites with hundreds or
+                        thousands of pages difficult to maintain. Therefore,
+                        larger websites typically use dynamic pages, which can
+                        be updated by simply modifying a database record. Static
+                        sites that contain a lot of pages are often designed
+                        using templates. This makes it possible to update
+                        several pages at once, and also helps provide a
+                        consistent layout throughout the site.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- static sites generators display -->
+          <div
+            class="row"
+            style="display: none"
+            id="static-sites-generators-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Static websites generators</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        HTML editors often use web template systems to produce
+                        only static web pages. These can be viewed as a
+                        ready-made web design, used to mass-produce
+                        "cookie-cutter" websites for rapid deployment. They also
+                        commonly include themes in place of CSS styles. In
+                        general, the template language is used only with the
+                        editor's software.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content-Management Systems (CMS) display -->
+          <div
+            class="row"
+            style="display: none"
+            id="content-management-systems-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Content Management Systems (CMS)</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A content management system (CMS) is a computer software
+                        used to manage the creation and modification of digital
+                        content. CMSs are typically used for enterprise content
+                        management (ECM) and web content management (WCM). ECM
+                        typically supports multiple users in a collaborative
+                        environment by integrating document management, digital
+                        asset management and record retention. Alternatively,
+                        WCM is the collaborative authoring for websites and may
+                        include text and embed graphics, photos, video, audio,
+                        maps and program code that display content and interact
+                        with the user. ECM typically includes a WCM function.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- AJAX language display -->
+          <div class="row" style="display: none" id="ajax-language-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">AJAX</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Ajax is a combination of Web development technologies
+                        used for creating dynamic websites. While the term
+                        "Ajax" is not written in all caps like most tech
+                        acronyms, the letters stand for "Asynchronous JavaScript
+                        And XML." Therefore, websites that use Ajax combine
+                        JavaScript and XML to display dynamic content.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The "asynchronous" part of Ajax refers to the way
+                        requests are made to the Web server. When a script sends
+                        a request to the Web server, it may receive data, which
+                        can then be displayed on the Web page. Since these
+                        events happen at slightly different times, they are
+                        considered to be asynchronous. Most Ajax implementations
+                        use the XMLHttpRequest API, which includes a list of
+                        server requests that can be called within JavaScript
+                        code. The data is usually sent back to the browser in an
+                        XML format, since it is easy to parse. However, it is
+                        possible for the server to send data as unformatted
+                        plain text as well.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bootstrap display -->
+          <div class="row" style="display: none" id="bootstrap-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Bootstrap</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Bootstrap, or bootstrapping, is a verb that comes from
+                        the saying, "to pull oneself up by his bootstraps." The
+                        idiom implies a person is self sufficient, not requiring
+                        help from others. Similarly, in the computing world,
+                        bootstrapping describes a process that automatically
+                        loads and executes commands.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The most fundamental form of bootstrapping is the
+                        startup process that takes place when you start up a
+                        computer. In fact, the term "boot," as in booting up a
+                        computer, comes from the word bootstrap. When you turn
+                        on or restart a computer, it automatically loads a
+                        sequence of commands that initializes the system, checks
+                        for hardware, and loads the operating system. This
+                        process does not require any user input and is therefore
+                        considered a bootstrap process.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="web-development-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+
+          <!-- http & https display -->
+          <div class="row" style="display: none" id="http-https-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">HTTP and HTTPS</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <h6 class="text-center">HTTP</h6>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Hypertext Transfer Protocol." HTTP is the
+                        protocol used to transfer data over the web. It is part
+                        of the Internet protocol suite and defines commands and
+                        services used for transmitting webpage data.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        HTTP uses a server-client model. A client, for example,
+                        may be a home computer, laptop, or mobile device. The
+                        HTTP server is typically a web host running web server
+                        software, such as Apache or IIS. When you access a
+                        website, your browser sends a request to the
+                        corresponding web server and it responds with an HTTP
+                        status code. If the URL is valid and the connection is
+                        granted, the server will send your browser the webpage
+                        and related files.
+                      </p>
+                      <h6 class="text-center">HTTPS</h6>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "HyperText Transport Protocol Secure." HTTPS
+                        is the same thing as HTTP, but uses a secure socket
+                        layer (SSL) for security purposes. Some examples of
+                        sites that use HTTPS include banking and investment
+                        websites, e-commerce websites, and most websites that
+                        require you to log in.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ssl sertificates display -->
+          <div class="row" style="display: none" id="ssl-sertificates-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">SSL certificates</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Secure Sockets Layer." SSL is a secure
+                        protocol developed for sending information securely over
+                        the Internet. Many websites use SSL for secure areas of
+                        their sites, such as user account pages and online
+                        checkout. Usually, when you are asked to "log in" on a
+                        website, the resulting page is secured by SSL.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        SSL encrypts the data being transmitted so that a third
+                        party cannot "eavesdrop" on the transmission and view
+                        the data being transmitted. Only the user's computer and
+                        the secure server are able to recognize the data. SSL
+                        keeps your name, address, and credit card information
+                        between you and merchant to which you are providing it.
+                        Without this kind of encryption, online shopping would
+                        be far too insecure to be practical. When you visit a
+                        Web address starting with "https," the "s" after the
+                        "http" indicates the website is secure. These websites
+                        often use SSL certificates to verify their authenticity.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- vps display -->
+          <div class="row" style="display: none" id="vps-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">VPS</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Virtual Private Server." A VPS is a server
+                        created using software virtualization. It functions like
+                        a physical server, but it is a virtualized instance
+                        created within a server. A single physical machine can
+                        host multiple virtual private servers. A cloud-based VPS
+                        may be hosted across multiple servers.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The most common type of VPS is a web host. Many web
+                        hosting companies offer VPS hosting solutions as an
+                        alternative to shared hosting and dedicated hosting. A
+                        VPS sits in between the two options, usually in both
+                        performance and price. Like a shared host, a VPS may
+                        share the resources of a physical machine with other
+                        hosting accounts. However, a VPS is custom-configureable
+                        like a dedicated hosting solution it is isolated
+                        ("private") from other accounts.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- cdn display -->
+          <div class="row" style="display: none" id="cdn-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Content Delivery Network (CDN)</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Content Delivery Network." A CDN is a group
+                        of servers distributed in different locations. Small
+                        CDNs may be located within a single country, while large
+                        CDNs are spread across data centers around the world.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        CDNs are used to provide content to users in different
+                        locations as quickly as possible. For example, a user in
+                        San Francisco may receive website content from a server
+                        in Los Angeles, while a user in England may receive the
+                        same content from a server in London. This is
+                        accomplished using data replication, which stores the
+                        same data on multiple servers. Whenever you access a
+                        website hosted on a CDN, the network will intelligently
+                        provide you with the content using the server closest to
+                        the your geographical location.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- caching display -->
+          <div class="row" style="display: none" id="caching-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Caching and Cache</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Caching is the process of storing data in a cache.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A cache is a temporary storage area. For example, the
+                        files you automatically request by looking at a Web page
+                        are stored on your hard disk in a cache subdirectory
+                        under the directory for your browser. When you return to
+                        a page you've recently looked at, the browser can get
+                        those files from the cache rather than the original
+                        server, saving you time and saving the network the
+                        burden of additional traffic.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- shared hosting display -->
+          <div class="row" style="display: none" id="shared-hosting-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Shared hosting</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Shared hosting allows multiple websites to utilize a
+                        single server. Usually, you’ll have no idea who or what
+                        websites you’re sharing the resources of a server with.
+                        Each customer will usually have a limit on the total
+                        amount of server resources they can use, but this will
+                        be defined by your hosting package.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Shared hosting is easily the cheapest and most
+                        economical option for your needs. However, the cheap
+                        price comes with limitations, which we’ll get to below.
+                        Since most hosting companies will offer the same amount
+                        of space and storage it’s important to choose a company
+                        you can trust.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- cloud hosting display -->
+          <div class="row" style="display: none" id="cloud-hosting-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Cloud hosting</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Cloud hosting is the procurement of computing resources
+                        from a cloud computing provider or facility to host
+                        data, services and/or solutions.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Cloud hosting is an Infrastructure as a Service (IaaS)
+                        cloud delivery model that provides a suite of
+                        remote/virtual services. These are delivered on an
+                        on-demand basis and hosted on top of a cloud computing
+                        infrastructure.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- dedicated server display -->
+          <div class="row" style="display: none" id="dedicated-server-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Dedicated server</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A dedicated server is a computer that is set aside for a
+                        specific task, such as hosting a resource intensive
+                        application or website. Dedicated servers can take
+                        several forms.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        With a dedicated server, the server is a computer that
+                        is reserved explicitly on a network for your application
+                        or website.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        For many web hosting companies, the standard type of
+                        hosting, or at least the lowest priced option, is in the
+                        form of cloud hosting. When your company chooses a
+                        public cloud provider, your application and website may
+                        reside on one or many computers and utilize cloud
+                        computing.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- optimisation display -->
+          <div class="row" style="display: none" id="optimisation-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Optimisation (SEO)</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Also called search engine optimization (SEO), website
+                        optimization is a phrase that describes the procedures
+                        used to optimize – or to design from scratch – a website
+                        to rank well in search engines. Website optimization
+                        includes processes such as adding relevant keyword and
+                        phrases on the website, editing meta tags, image tags,
+                        and optimizing other components of your website to
+                        ensure that it is accessible to a search engine and
+                        improve the overall chances that the website will be
+                        indexed by search engines.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="hosting-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+
+          <!-- RAM display -->
+          <div class="row" style="display: none" id="ram-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">RAM</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Random Access Memory" and is pronounced
+                        "ram." RAM is a common hardware component found in
+                        electronic devices, including desktop computers,
+                        laptops, tablets, and smartphones. In computers, RAM may
+                        be installed as memory modules, such as DIMMs or
+                        (SO-DIMMs sodimm). In tablets and smartphones, RAM is
+                        typically integrated into the device and cannot be
+                        removed.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The amount of RAM in a device determines how much memory
+                        the operating system and open applications can use. When
+                        a device has sufficient RAM, several programs can run
+                        simultaneously without any slowdown. When a device uses
+                        close to 100% of the available RAM, memory must be
+                        swapped between applications, which may cause a
+                        noticeable slowdown. Therefore, adding RAM or buying a
+                        device with more RAM is one of the best ways to improve
+                        performance.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ROM display -->
+          <div class="row" style="display: none" id="rom-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">ROM</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Read-Only Memory." Please do not confuse
+                        this term with RAM or a hard drive, as many people
+                        already do. ROM is memory containing hardwired
+                        instructions that the computer uses when it boots up,
+                        before the system software loads. In PCs, the
+                        instructions are read from a small program in the ROM,
+                        called the BIOS (Basic Input/Output System).
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- VRAM display -->
+          <div class="row" style="display: none" id="vram-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">VRAM</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Video Random Access Memory" and is
+                        pronounced "V-RAM." System RAM is great for loading and
+                        running programs, but when you need graphics power, VRAM
+                        is where it's at. This is the memory used to store image
+                        data that the computer displays; it acts as a buffer
+                        between the CPU and the video card. When a picture is to
+                        be displayed on the screen, the image is first read by
+                        the processor and then written to the VRAM. The data is
+                        then converted by a RAM digital-to-analog converter
+                        (RAMDAC) into analog signals that are sent to the
+                        display. Of course, the whole process happens so
+                        quickly, you don't notice it. Unlike most system RAM,
+                        VRAM chips are dual-ported, which means that while the
+                        display is reading from VRAM to refresh the currently
+                        displayed image, the processor is writing a new image to
+                        the VRAM. This prevents the display from flickering
+                        between the redrawing of images.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- processor display -->
+          <div class="row" style="display: none" id="processor-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Processor</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A processor, or "microprocessor," is a small chip that
+                        resides in computers and other electronic devices. Its
+                        basic job is to receive input and provide the
+                        appropriate output. While this may seem like a simple
+                        task, modern processors can handle trillions of
+                        calculations per second.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The central processor of a computer is also known as the
+                        CPU, or "central processing unit." This processor
+                        handles all the basic system instructions, such as
+                        processing mouse and keyboard input and running
+                        applications. Most desktop computers contain a CPU
+                        developed by either Intel or AMD, both of which use the
+                        x86 processor architecture. Mobile devices, such as
+                        laptops and tablets may use Intel and AMD CPUs, but can
+                        also use specific mobile processors developed by
+                        companies like ARM or Apple.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- videocard display -->
+          <div class="row" style="display: none" id="videocard-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Videocard</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Most of the processing done on a computer is done via
+                        the computer's central processing unit, or CPU. So in
+                        order to give the CPU a break and help it run more
+                        efficiently, a video card can be used to process the
+                        graphics portion of the processing load. Because most of
+                        today's programs are graphically oriented, the video
+                        card can help almost any program run more efficiently.
+                        However, the difference in performance is especially
+                        noticeable in image editing applications and 3D games.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Video cards, also called graphics accelerators, can
+                        speed up both 2D and 3D graphics rendering. Programs
+                        such as photo editors and Web browsers may benefit from
+                        2D acceleration, while CAD design programs and video
+                        games will most likely benefit from the card's 3D
+                        acceleration. Some programs rely so heavily on the video
+                        card, that they will not run if a supported video card
+                        is not installed.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- soundcard display -->
+          <div class="row" style="display: none" id="soundcard-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Soundcard</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The sound card is a component inside the computer that
+                        provides audio input and output capabilities. Most sound
+                        cards have at least one analog line input and one stereo
+                        line output connection. The connectors are typically 3.5
+                        mm minijacks, which are the size most headphones use.
+                        Some sound cards also support digital audio input and
+                        output, either through a standard TRS (tip-ring-sleeve)
+                        connection or via an optical audio port, such as Toslink
+                        connector.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        While there are many types of sound cards, any type that
+                        produces an analog output must include a
+                        digital-to-analog converter (DAC). This converts the
+                        outgoing signal from digital to analog, which can be
+                        played through most speaker systems. Sounds cards that
+                        support analog input also require an analog-to-digital
+                        converter (ADC). This digitizes the incoming analog
+                        signal, so the computer can process it.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- motherboard display -->
+          <div class="row" style="display: none" id="motherboard-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Motherboard</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The motherboard is the main circuit board of your
+                        computer and is also known as the mainboard or logic
+                        board. If you ever open your computer, the biggest piece
+                        of silicon you see is the motherboard. Attached to the
+                        motherboard, you'll find the CPU, ROM, memory RAM
+                        expansion slots, PCI slots, and USB ports. It also
+                        includes controllers for devices like the hard drive,
+                        DVD drive, keyboard, and mouse. Basically, the
+                        motherboard is what makes everything in your computer
+                        work together.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Each motherboard has a collection of chips and
+                        controllers known as the chipset. When new motherboards
+                        are developed, they often use new chipsets. The good
+                        news is that these boards are typically more efficient
+                        and faster than their predecessors. The bad news is that
+                        older components often do not work with new chipsets. Of
+                        course, if you are planning on upgrading multiple
+                        components, it may be more cost-effective to just buy a
+                        new computer.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- input devices display -->
+          <div class="row" style="display: none" id="input-devices-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Input devices</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        An input device is any device that provides input to a
+                        computer. There are dozens of possible input devices,
+                        but the two most common ones are a keyboard and mouse.
+                        Every key you press on the keyboard and every movement
+                        or click you make with the mouse sends a specific input
+                        signal to the computer. These commands allow you to open
+                        programs, type messages, drag objects, and perform many
+                        other functions on your computer.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Since the job of a computer is primarily to process
+                        input, computers are pretty useless without input
+                        devices. Just imagine how much fun you would have using
+                        your computer without a keyboard or mouse. Not very
+                        much. Therefore, input devices are a vital part of every
+                        computer system.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- coolant system display -->
+          <div class="row" style="display: none" id="coolant-system-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Coolant system</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Computer cooling is required to remove the waste heat
+                        produced by computer components, to keep components
+                        within permissible operating temperature limits.
+                        Components that are susceptible to temporary malfunction
+                        or permanent failure if overheated include integrated
+                        circuits such as central processing units (CPUs),
+                        chipset, graphics cards, and hard disk drives.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Components are often designed to generate as little heat
+                        as possible, and computers and operating systems may be
+                        designed to reduce power consumption and consequent
+                        heating according to workload, but more heat may still
+                        be produced than can be removed without attention to
+                        cooling. Use of heatsinks cooled by airflow reduces the
+                        temperature rise produced by a given amount of heat.
+                        Attention to patterns of airflow can prevent the
+                        development of hotspots. Computer fans are widely used
+                        along with heatsink fans to reduce temperature by
+                        actively exhausting hot air. There are also more exotic
+                        cooling techniques, such as liquid cooling. All modern
+                        day processors are designed to cut out or reduce their
+                        voltage or clock speed if the internal temperature of
+                        the processor exceeds a specified limit.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- optical drive display -->
+          <div class="row" style="display: none" id="optical-drive-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Optical drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        In the real world, "optical" refers to vision, or the
+                        ability to see. In the computer world, however,
+                        "optical" refers to lasers, which can "see" and read
+                        data on optical discs. These discs include CDs and DVDs,
+                        which are made up of millions of small bumps and dips.
+                        Optical drives have lasers that read these bumps and
+                        dips as ones and zeros, which the computer can
+                        understand.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Some common types of optical drives include CD-ROM,
+                        CD-RW, DVD-ROM, DVD-RW, and Blu-ray drives. CD and DVD
+                        writers, such as CD-R and DVD-R drives use a laser to
+                        both read and write data on the discs. The laser used
+                        for writing the data is much more powerful than the
+                        laser that reads the data, as it "burns" the bumps and
+                        dips into the disc. While optical drives can spin discs
+                        at very high speeds, they are still significantly slower
+                        than hard drives, which store data magnetically.
+                        However, because optical media is inexpensive and
+                        removable, it is the most common format used for
+                        distributing computer software.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- hard drive display -->
+          <div class="row" style="display: none" id="hard-drive-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Hard drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The hard drive is what stores all your data. It houses
+                        the hard disk, where all your files and folders are
+                        physically located. A typical hard drive is only
+                        slightly larger than your hand, yet can hold over 100 GB
+                        of data. The data is stored on a stack of disks that are
+                        mounted inside a solid encasement. These disks spin
+                        extremely fast (typically at either 5400 or 7200 RPM) so
+                        that data can be accessed immediately from anywhere on
+                        the drive. The data is stored on the hard drive
+                        magnetically, so it stays on the drive even after the
+                        power supply is turned off.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The term "hard drive" is actually short for "hard disk
+                        drive." The term "hard disk" refers to the actual disks
+                        inside the drive. However, all three of these terms are
+                        usually seen as referring to the same thing -- the place
+                        where your data is stored. Since I use the term "hard
+                        drive" most often, that is the correct one to use.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- power supply system display -->
+          <div
+            class="row"
+            style="display: none"
+            id="power-supply-system-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Power supply system</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        A power supply is a hardware component that supplies
+                        power to an electrical device. It receives power from an
+                        electrical outlet and converts the current from AC
+                        (alternating current) to DC (direct current), which is
+                        what the computer requires. It also regulates the
+                        voltage to an adequate amount, which allows the computer
+                        to run smoothly without overheating. The power supply an
+                        integral part of any computer and must function
+                        correctly for the rest of the components to work.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        You can locate the power supply on a system unit by
+                        simply finding the input where the power cord is plugged
+                        in. Without opening your computer, this is typically the
+                        only part of the power supply you will see. If you were
+                        to remove the power supply, it would look like a metal
+                        box with a fan inside and some cables attached to it. Of
+                        course, you should never have to remove the power
+                        supply, so it's best to leave it in the case.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- power wires display -->
+          <div class="row" style="display: none" id="power-wires-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Power wires</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Wires and connectors are not perfect conductors. They
+                        have resistance. When current passes through wires and
+                        connectors there is a voltage drop and that energy is
+                        lost as heat. As long as you don't overload them the
+                        voltage drop and extra heat don't matter. But the losses
+                        get worse as the current rises. That's why you see some
+                        power cables with more that one wire for the same
+                        voltage. Having multiple wires reduces the losses. If
+                        you seriously overload a line, the wire can get fairly
+                        warm. The resistance of connectors tends to increase as
+                        they are plugged and unplugged so after enough uses they
+                        can overheat and even melt when passing a large current.
+                        So a lot of changes in connectors over time has to do
+                        with adding more wires and connectors to make sure that
+                        none of these problems occur.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- data cables display -->
+          <div class="row" style="display: none" id="data-cables-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Data cables</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        There are two main types of computer cables, a data
+                        cable and a power cable. A data cable is a cable that
+                        provides communication between devices. For example, the
+                        data cable (i.e., DVI, HDMI, or VGA) that connects your
+                        monitor to your computer allow it to display a picture
+                        on the monitor. Other popular examples of data cables
+                        include the CAT5, IDE/EIDE, SATA, and USB cables. A
+                        power cable is any cable that powers the device. For
+                        example, the power cord that connects to your computer
+                        and a Molex style cable inside the computer are both
+                        good examples of power cables. Below, is a listing of
+                        the most common types of cables found with computers and
+                        electronics and examples of devices that use them.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="computer-components-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+
+          <!-- HDD display -->
+          <div class="row" style="display: none" id="hdd-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">HDD</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Hard Disk Drive." "HDD" is often used
+                        interchangeably with the terms "hard drive" and "hard
+                        disk." However, the term "hard disk drive" is
+                        technically the most accurate, since "hard drive" is
+                        short for "hard disk drive" and the "hard disk" is
+                        actually contained within the hard disk drive.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The HDD is the most common storage device used to store
+                        data. Most computers made in the 1980s, 1990s, and 2000s
+                        include an internal hard disk drive. The first PCs had
+                        hard drives that were less than one megabyte in size,
+                        while modern hard drives may contain several terabytes
+                        of data. Some desktop computers have multiple internal
+                        hard drives, and external hard drives are often used for
+                        additional storage or backup purposes.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SSD display -->
+          <div class="row" style="display: none" id="ssd-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">SSD</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Stands for "Solid State Drive." An SSD is a type of mass
+                        storage device similar to a hard disk drive (HDD). It
+                        supports reading and writing data and maintains stored
+                        data in a permanent state even without power. Internal
+                        SSDs connect to a computer like a hard drive, using
+                        standard IDE or SATA connections.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        While SSDs serve the same function as hard drives, their
+                        internal components are much different. Unlike hard
+                        drives, SSDs do not have any moving parts (which is why
+                        they are called solid state drives). Instead of storing
+                        data on magnetic platters, SSDs store data using flash
+                        memory. Since SSDs have no moving parts, they don't have
+                        to "spin up" while in a sleep state and they don't need
+                        to move a drive head to different parts of the drive to
+                        access data. Therefore, SSDs can access data faster than
+                        HDDs.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- NMVe SSD display -->
+          <div class="row" style="display: none" id="nvme-ssd-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">NMVe SSD</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        NVMe (Non-Volatile Memory Express) is an interface
+                        protocol built especially for Solid State Drives (SSDs).
+                        NVMe works with PCI Express (PCIe) to transfer data to
+                        and from SSDs. NVMe enables rapid storage in computer
+                        SSDs and is an improvement over older Hard Disk Drive
+                        (HDD) related interfaces such as SATA and SAS. The only
+                        reason SATA and SAS are used with SSDs in computers is
+                        that until recently, only slower HDDs have been used as
+                        the large-capacity storage in computers. Flash memory
+                        has been used in mobile devices such as smartphones,
+                        tablets, USB drives and SD cards. (SSDs are flash
+                        memory.)
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- optical drive display -->
+          <div class="row" style="display: none" id="optical-drive-display2">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Optical drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        In the real world, "optical" refers to vision, or the
+                        ability to see. In the computer world, however,
+                        "optical" refers to lasers, which can "see" and read
+                        data on optical discs. These discs include CDs and DVDs,
+                        which are made up of millions of small bumps and dips.
+                        Optical drives have lasers that read these bumps and
+                        dips as ones and zeros, which the computer can
+                        understand.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Some common types of optical drives include CD-ROM,
+                        CD-RW, DVD-ROM, DVD-RW, and Blu-ray drives. CD and DVD
+                        writers, such as CD-R and DVD-R drives use a laser to
+                        both read and write data on the discs. The laser used
+                        for writing the data is much more powerful than the
+                        laser that reads the data, as it "burns" the bumps and
+                        dips into the disc. While optical drives can spin discs
+                        at very high speeds, they are still significantly slower
+                        than hard drives, which store data magnetically.
+                        However, because optical media is inexpensive and
+                        removable, it is the most common format used for
+                        distributing computer software.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- flash drive display -->
+          <div class="row" style="display: none" id="flash-drive-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Flash drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Flash drives have many names — jump drives, thumb
+                        drives, pen drives, and USB keychain drives. Regardless
+                        of what you call them, they all refer to the same thing,
+                        which is a small data storage device that uses flash
+                        memory and has a built-in USB connection.
+                      </p>
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Flash drives are typically no more than two to three
+                        inches in length and less than an inch in width. Their
+                        size and shape may resemble a thumb or a small pen
+                        (which is where the names "thumb drive" and "pen drive"
+                        come from). Flash drives are also very thin, often
+                        having a depth of less than a centimeter. Because of
+                        their small form factor, they are highly portable and
+                        can easily fit in a pocket or on a keychain (hence the
+                        name "keychain drive").
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- tape drive display -->
+          <div class="row" style="display: none" id="tape-drive-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Tape drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        Tape drive is a removable storage device mainly used for
+                        backing up data. It is similar to a Zip Drive, but
+                        instead of Zip disks, it uses small tapes. The drive
+                        acts like a tape recorder, reading data from the
+                        computer and writing it onto the tape. Since tape drives
+                        have to scan through lots of tape to read small amounts
+                        of scattered data, they are not practical for most
+                        storage purposes. That is why they are used almost
+                        exclusively for data backup. The benefit of tape drives
+                        is that they typically have large capacities for storing
+                        data, for a lower cost than hard drives similar in size.
+                        Also, multiple tapes can be used to make incremental
+                        backups (daily, weekly, monthly, etc.), which is much
+                        cheaper than using multiple hard drives.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- magnet tape drive display -->
+          <div class="row" style="display: none" id="magnet-tape-drive-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Magnet tape</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- punched card display -->
+          <div class="row" style="display: none" id="punched-card-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Punched card</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- punched tape display -->
+          <div class="row" style="display: none" id="punched-tape-display">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Punched tape</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- magneto optical drive display -->
+          <div
+            class="row"
+            style="display: none"
+            id="magneto-optical-drive-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Magneto optical drive</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- magnetic core memory display -->
+          <div
+            class="row"
+            style="display: none"
+            id="magnetic-core-memory-display"
+          >
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12" style="height: 70vh; width: 100%">
+                  <h3 class="text-center">Magnetic core memory</h3>
+                  <div class="row">
+                    <div class="col-1 d-none d-lg-block"></div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+                      <p style="text-align: justify; text-indent: 1.5rem">
+                        The C programming language is a computer programming
+                        language that was developed to do system programming for
+                        the operating system UNIX and is an imperative
+                        programming language. C was developed in the early 1970s
+                        by Ken Thompson and Dennis Ritchie at Bell Labs. It is a
+                        procedural language, which means that people can write
+                        their programs as a series of step-by-step instructions.
+                        C is a compiled language.
+                      </p>
+                    </div>
+                    <div class="col-1 d-none d-lg-block"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div
+                  class="col-12 text-center"
+                  style="height: 16vh; width: 100%"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-primary block-switch"
+                    data-target="storage-types-mainblock"
+                    style="margin-top: 50px"
+                  >
+                    Return back!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </section>
+      <section id="footer-page">
+        <div>
+          <footer class="page-footer font-small blue bg-primary" id="footer">
+            <div class="footer-copyright text-center py-3 text-white">
+              © 2020 Copyright:
+              <a href="https://yuryjin.com/" class="text-white"> Yuryjin.com</a>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(".block-switch").click(function () {
+        $("#content div").hide();
+        var target = "#" + $(this).data("target");
+        $(target).show().siblings("div").hide();
+      });
+    </script>
+  </body>
+</html>
